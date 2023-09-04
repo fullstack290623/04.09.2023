@@ -31,15 +31,28 @@
             }
         }
         student.print_avg()
-        
+
         // create person with fields of:
         // first_name danny
         // last_name shovevani
         // print_full_name function which print the full_name => danny shovevani
-        // age will contain value prompt by the user - 12
+        // age will contain value prompt by the user : 12
         // print_dannys_age_after(after_years) after_years = 10 ==> 22
         // print the object in JSON.stringify
-        
+        const dannys_age = parseInt(prompt("Enter danny's age: "))
+        const person = {
+            first_name: 'danny',
+            last_name: 'shovevani',
+            age: dannys_age,
+            print_full_name() {
+                document.write(`${this.first_name} ${this.last_name} <br />`)
+            },
+            print_dannys_age_after(after_years) {
+                document.write(`After ${after_years} years danny will
+                                  be ${this.age + after_years} years old <br />`)
+            }
+        }
+        console.log(JSON.stringify(person));
     </script>
 </body>
 </html>

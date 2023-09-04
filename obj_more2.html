@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MORE OBJECTS 2</title>
+</head>
+<body>
+    <script>
+
+        function create_student(student_name, student_grades, student_age) {
+            const obj = {
+                name: student_name,
+                grades: student_grades,
+                print_avg() {
+                    let sum = 0
+                    this.grades.forEach(grade => sum += grade)
+                    let avg = sum / this.grades.length
+                    document.write(`Student ${this.name} avg:${avg}`)
+                },
+                age: student_age,
+                say_hello() {
+                    console.log('hello');
+                }
+            }
+
+            return obj;
+        }
+        // nodejs
+        const danny = create_student('danny', [99, 100, 97, 88], 25)
+        const ronny = create_student('ronny', [79, 91, 100, 75], 28)
+        danny.print_avg()
+        ronny.print_avg()
+
+        // write a function that creates a point
+        // inside the point there will be x, y
+        // function called print() -- document.write (1.5, 7.9)  1.5, 7.9
+        // *bonus: function equals(point) returns true if x + y are equal in both points
+
+    </script>
+</body>
+</html>
